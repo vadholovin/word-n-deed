@@ -1,0 +1,102 @@
+/* ==========================================================================
+   #FOOTER
+   ========================================================================== */
+
+.footer {
+  text-align: center;
+  color: #fff;
+  background-color: $color-bg-dark;
+}
+
+.footer__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #fff;
+}
+
+.footer__logo {
+  margin-bottom: 32px;
+}
+
+.footer-menu {
+  margin-bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+}
+
+
+
+.footer-menu__item:not(:last-child)::after {
+  @include pseudo(inline-block, relative);
+
+  vertical-align: middle;
+  width: 4px;
+  height: 4px;
+  margin-left: 16px;
+  margin-right: 16px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.footer-menu__item a {
+  position: relative;
+  font-size: rem(15);
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.footer-menu__item a::after {
+  @include pseudo();
+  @include basic-transition((width));
+
+  bottom: -4px;
+  left: 50%;
+  width: 0%;
+  height: 0;
+  border-top: 1px solid #fff;
+  transform: translateX(-50%);
+}
+
+.footer-menu__item a {
+
+  @include on-event {
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.footer__contact {
+  font-weight: 500;
+  font-size: rem(14);
+  text-decoration: none;
+
+  @include on-event {
+    color: #fff;
+  }
+}
+
+.footer__contact .icon {
+  position: relative;
+  top: -0.1em;
+  width: 1.7em;
+  height: 1.7em;
+  margin-right: 12px;
+}
+
+.footer__bottom {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer__copyright {
+  font-weight: 300;
+  font-size: rem(12);
+}

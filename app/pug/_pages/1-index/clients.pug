@@ -1,0 +1,44 @@
+-
+  var clients = [
+    {
+      img: "img/content/clients/client-1.png"
+    },
+    {
+      img: "img/content/clients/client-2.png"
+    },
+    {
+      img: "img/content/clients/client-3.png"
+    },
+    {
+      img: "img/content/clients/client-4.png"
+    },
+    {
+      img: "img/content/clients/client-5.png"
+    },
+    {
+      img: "img/content/clients/client-6.png"
+    },
+    {
+      img: "img/content/clients/client-7.png"
+    },
+    {
+      img: "img/content/clients/client-8.png"
+    },
+  ]
+
+section.page-section.clients
+  .o-container
+    h2.clients__heading.heading.heading--bar Наши клиенты
+    .clients-slider__wrapper.slider__wrapper
+      .clients-slider.js-clients-slider
+        each item, index in clients
+          .clients-item
+            img(
+              src= item.img,
+              alt=""
+            )
+      .clients-controls.slider-controls.slider-controls--t-center.js-clients-controls(aria-label="Навигация слайдера")
+        button.slider-controls__prev(aria-label="Предыдущий")
+          +icon('chevron-right')
+        button.slider-controls__next(aria-label="Следующий")
+          +icon('chevron-right')

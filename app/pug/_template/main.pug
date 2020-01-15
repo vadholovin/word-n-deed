@@ -1,0 +1,21 @@
+include ../_utils/mixins.pug
+block variables
+
+doctype html
+html(class='no-js', lang='ru')
+  head
+    meta(charset="utf-8")
+    title #{title}
+    <!--[if IE]>
+    meta(http-equiv='X-UA-Compatible', content="IE = edge")
+    <![endif]-->
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="keywords" content="")
+    <script>document.documentElement.classList.remove("no-js");</script>
+    link(rel="stylesheet" type='text/css' href="css/styles.min.css")
+  body(class=pageClass)
+    block content
+    .page-mask.js-page-mask
+    script(src="js/libs.min.js")
+    script(src="js/main.js")
+    block script

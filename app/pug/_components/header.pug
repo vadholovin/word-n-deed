@@ -1,0 +1,67 @@
+header.header
+  .o-container
+    .header__inner
+      nav.header__nav
+        //- LOGO ==============================================================
+        if pageClass == "home-page"
+          .header__logo.logo
+            img(
+              src="img/general/logo.png",
+              srcset="img/general/logo@2x.png 2x",
+              width="148",
+              alt="Логотип компании Слово и Дело"
+            )
+        else
+          a.header__logo.logo(href="index.html")
+            img(
+              src="img/general/logo.png",
+              srcset="img/general/logo@2x.png 2x",
+              width="148",
+              alt="Перейти на главную страницу"
+            )
+        //- MENU ==============================================================
+        ul.header-menu
+          li
+            a.header-menu__link(href="about.html") О нас
+          li
+            a.header-menu__link(href="practices.html") Практики
+          li
+            a.header-menu__link(href="lawyers.html") Адвокаты
+          li
+            a.header-menu__link(href="contacts.html") Контакты
+
+        //- SEARCH ============================================================
+        .header-search__wrapper
+          button.header-search__button.js-search-toggler(
+            type="button",
+            aria-label="Открыть форму поиска"
+          )
+            +icon('search')
+          form.header-search.form.js-header-search(
+            role='search',
+            action="/",
+            method="get",
+            aria-label="Форма поиска"
+          )
+            .inputbox
+              label.u-hidden-visually(for="header-search")
+                | Поиск по сайту
+              .inputbox__wrapper
+                input.input#header-search(
+                  autocomplete='off',
+                  name='s',
+                  type='text',
+                  placeholder='Поиск...',
+                )
+            button.header-search__close.js-search-close(
+              type="button",
+              aria-label="Закрыть форму поиска"
+            )
+              +icon('close')
+            button.header-search__button(
+              type="submit",
+              aria-label="Найти"
+            )
+              +icon('search')
+
+      a.header__contact(href="+79224776786") +7 (922) 477-67-86

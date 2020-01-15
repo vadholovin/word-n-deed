@@ -1,0 +1,85 @@
+/* ==========================================================================
+   #TEAM
+   ========================================================================== */
+
+$team-item-body-x: 22px;
+
+.team {
+  background-color: $color-blue-100;
+}
+
+.team-slider {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.team-item {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  margin-right: 15px;
+
+  @include on-event {
+    outline: none;
+  }
+}
+
+.team-item__picture {
+  position: relative;
+  height: 350px;
+
+  clip-path: $global-clip-path;
+}
+
+.team-item__picture img {
+  @include fill-img;
+}
+
+.team-item__body {
+  position: relative;
+  padding: 16px $team-item-body-x;
+  background-color: #fff;
+}
+
+.team-item__body::after {
+  @include pseudo();
+
+  height: 0;
+  top: -2px;
+  left: $team-item-body-x;
+  width: 60px;
+  border-top: 4px solid $color-primary;
+}
+
+.team-item__name {
+  margin-bottom: 4px;
+  font-weight: normal;
+  font-size: rem(22);
+  line-height: 1.15;
+}
+
+.team-item__position {
+  font-weight: 300;
+  font-size: rem(15);
+  line-height: 1.15;
+}
+
+.team-controls .slider-controls__prev,
+.team-controls .slider-controls__next {
+  border-color: #eaeaea;
+  background-color: #ffffff;
+  box-shadow: 0 3px 6.93px 0.07px rgba(0, 0, 0, 0.1);
+
+  @include on-event {
+    border-color: $color-primary;
+    background-color: $color-primary;
+  }
+}
+
+.team-controls .slider-controls__prev {
+  left: -12px;
+}
+
+.team-controls .slider-controls__next {
+  right: -12px;
+}

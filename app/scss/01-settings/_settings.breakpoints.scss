@@ -1,0 +1,23 @@
+///* ==========================================================================
+//   #BREAKPOINTS-VARIABLES
+//   ========================================================================== */
+
+$bkp-xl: 1920px;
+$bkp-lg: 1300px;
+$bkp-md: 1024px;
+$bkp-sm: 768px;
+$bkp-xs: 480px;
+
+$breakpoints: (
+  xl: $bkp-xl,
+  lg: $bkp-lg,
+  md: $bkp-md,
+  sm: $bkp-sm,
+  xs: $bkp-xs,
+);
+
+// /**
+//  * Breakpoints needed for sass-mq mixin
+//  */
+
+$mq-breakpoints: $breakpoints !default;

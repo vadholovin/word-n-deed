@@ -1,0 +1,29 @@
+section.page-section.request(
+  style="background-image:url(img/backgrounds/bg-banner-1.jpg);"
+)
+  .o-container
+    h2.request__heading.heading Оставье заявку и получите бесплатную консультацию
+    form.request-form.form
+      .inputbox
+        label.u-hidden-visually(for="request-name") Укажите ваше имя
+        .inputbox__wrapper
+          input.input(
+            type="text",
+            name="request-name",
+            id="request-name",
+            placeholder="Ваше имя"
+          )
+      .inputbox
+        label.u-hidden-visually(for="request-phone") Укажите ваш телефон
+        .inputbox__wrapper
+          input.input.js-phone(
+            type="tel",
+            name="request-phone",
+            id="request-phone",
+            placeholder="Ваш телефон"
+          )
+      button.request-form__button.c-btn.c-btn--block.c-btn--primary.c-btn--icon(type="submit")
+        | Оставить заявку
+        span.icon.icon-chevron-right
+          svg
+            use(xlink:href="img/svg/symbol/sprite.svg#chevron-right")

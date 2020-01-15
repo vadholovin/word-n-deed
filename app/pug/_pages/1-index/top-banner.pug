@@ -1,0 +1,67 @@
+-
+  var slides = [
+    {
+      heading: "Слово и дело",
+      subheading: `Внимательность к деталям! <br> Ваши юридические и финансовые консультанты.`,
+    },
+    {
+      heading: "Слово и дело",
+      subheading: `Внимательность к деталям! <br> Ваши юридические и финансовые консультанты.`,
+    },
+    {
+      heading: "Слово и дело",
+      subheading: `Внимательность к деталям! <br> Ваши юридические и финансовые консультанты.`,
+    },
+  ]
+
+.top-banner(
+  style="background-image:url(img/backgrounds/top-banner.jpg);"
+)
+  .top-banner-video__container
+    video.top-banner-video(
+      loop='',
+      autoplay='',
+      controls='',
+      muted='',
+      poster='img/backgrounds/top-banner.jpg'
+    )
+      source(src='img/backgrounds/bgvideo.mp4', type='video/mp4')
+  .o-container
+    .top-banner-slider__wrapper.slider__wrapper
+      .top-banner-slider.js-top-banner-slider
+        each item, index in slides
+          .top-banner-item
+            .top-banner__heading.heading.heading--bar= item.heading
+            p.top-banner__subheading.heading!= item.subheading
+            button.top-banner__btn.c-btn.c-btn--outline.c-btn--icon.js-popup-form(type="button") Получить консультацию
+              +icon('chevron-right')
+            h3.top-banner__areas-heading Специализации:
+            ul.top-banner__areas
+              li.top-banner__area
+                .top-banner__area-icon
+                  +icon('law-case', false, true)
+                span.top-banner__area-text
+                  | Уголовно–правовая защита
+                  br
+                  | личности и бизнеса
+              li.top-banner__area
+                .top-banner__area-icon
+                  +icon('justice', false, true)
+                span.top-banner__area-text
+                  | Разрешение споров
+                  br
+                  | и конфликтов
+              li.top-banner__area
+                .top-banner__area-icon
+                  +icon('man-book', false, true)
+                span.top-banner__area-text
+                  | Семейный
+                  br
+                  | адвокат
+
+
+      .top-banner-controls.slider-controls.js-top-banner-controls(aria-label="Навигация слайдера")
+        button.slider-controls__prev(aria-label="Предыдущий")
+          +icon('chevron-right')
+        button.slider-controls__next(aria-label="Следующий")
+          +icon('chevron-right')

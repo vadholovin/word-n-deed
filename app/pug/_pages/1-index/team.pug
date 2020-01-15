@@ -1,0 +1,55 @@
+-
+  var team = [
+    {
+      name: "Иван Васильевич",
+      position: "Главный юрист по уг. делам",
+      img: "img/content/team-1.jpg"
+    },
+    {
+      name: "Иван Васильевич",
+      position: "Главный юрист по уг. делам",
+      img: "img/content/team-1.jpg"
+    },
+    {
+      name: "Иван Васильевич",
+      position: "Главный юрист по уг. делам",
+      img: "img/content/team-1.jpg"
+    },
+    {
+      name: "Иван Васильевич",
+      position: "Главный юрист по уг. делам",
+      img: "img/content/team-1.jpg"
+    },
+    {
+      name: "Иван Васильевич",
+      position: "Главный юрист по уг. делам",
+      img: "img/content/team-1.jpg"
+    },
+    {
+      name: "Иван Васильевич",
+      position: "Главный юрист по уг. делам",
+      img: "img/content/team-1.jpg"
+    },
+  ]
+
+section.page-section.team
+  .o-container
+    h2.team__heading.heading.heading--bar Наша команда
+    .team-slider__wrapper.slider__wrapper
+      .team-slider.js-team-slider
+        each item, index in team
+          .team-item
+            .team-item__picture
+              img(
+                src= item.img,
+                alt=""
+              )
+            .team-item__body
+              h3.team-item__name= item.name
+              p.team-item__position= item.position
+
+      .team-controls.slider-controls.slider-controls--t-center.js-team-controls(aria-label="Навигация слайдера")
+        button.slider-controls__prev(aria-label="Предыдущий")
+          +icon('chevron-right')
+        button.slider-controls__next(aria-label="Следующий")
+          +icon('chevron-right')

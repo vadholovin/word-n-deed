@@ -1,0 +1,70 @@
+/* ==========================================================================
+   #HEADER
+   ========================================================================== */
+
+.header {
+  position: relative;
+  background-color: #ffffff;
+  box-shadow: 0 3px 6.86px 0.14px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+
+.header.is-scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  .header__inner {
+    height: 64px;
+  }
+
+  .header__logo img {
+    width: 100px;
+  }
+}
+
+.header__inner,
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__inner {
+  height: 64px;
+
+  @include mq($from: md) {
+    height: 85px;
+  }
+}
+
+.header__nav {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.header__logo {
+  margin-right: auto;
+}
+
+.header__logo img {
+  width: 100px;
+}
+
+.header__contact {
+  display: none;
+  margin-left: 40px;
+  font-weight: bold;
+  font-size: rem(18);
+  color: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+
+  @include on-event {
+    color: $color-primary;
+  }
+
+  @include mq($from: md) {
+    display: block;
+  }
+}

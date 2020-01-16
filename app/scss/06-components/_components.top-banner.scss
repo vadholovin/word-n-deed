@@ -31,7 +31,10 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  max-height: 680px;
+
+  @include mq($from: lg) {
+    max-height: 680px;
+  }
 }
 
 .top-banner-video {
@@ -44,48 +47,98 @@
 }
 
 .top-banner-item {
-  padding-top: 80px;
-  padding-bottom: 96px;
+  padding: 60px 30px 70px 30px;
 
   @include on-event {
     outline: none;
   }
+
+  @include mq($from: sm) {
+    padding-top: 70px;
+  }
+
+  @include mq($from: md) {
+    padding-top: 80px;
+    padding-bottom: 96px;
+  }
+
+  @include mq($from: lg) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
 }
 
 .top-banner__heading {
   margin-bottom: 32px;
-  font-size: rem(48);
+  font-size: rem(32);
+
+  @include mq($from: xs) {
+    font-size: rem(36);
+  }
+  @include mq($from: sm) {
+    font-size: rem(44);
+  }
+  @include mq($from: md) {
+    font-size: rem(48);
+  }
 }
 
 .top-banner__subheading {
   margin-bottom: 36px;
-  font-size: rem(38);
+  font-size: rem(20);
   line-height: 1.4;
+
+  @include mq($from: xs) {
+    font-size: rem(24);
+  }
+  @include mq($from: sm) {
+    font-size: rem(32);
+  }
+  @include mq($from: md) {
+    font-size: rem(38);
+  }
 }
 
 .top-banner__btn {
-  margin-bottom: 4.5rem;
+  margin-bottom: 3rem;
   padding: 0.7em 30px;
+
+  @include mq($from: md) {
+    margin-bottom: 4.5rem;
+  }
 }
 
 .top-banner__areas-heading {
   margin-bottom: rem(28);
   font-family: $font-body;
   font-weight: 300;
-  font-size: rem(22);
+  font-size: rem(18);
+
+  @include mq($from: sm) {
+    font-size: rem(22);
+  }
 }
 
 .top-banner__areas {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   align-items: flex-start;
+
+  @include mq($from: sm) {
+    flex-direction: row;
+  }
 }
 
 .top-banner__area {
   display: flex;
   align-items: center;
-  margin-right: 45px;
   margin-bottom: 16px;
+
+  @include mq($from: xs) {
+    margin-right: 45px;
+  }
 
   &:last-child {
     margin-right: 0;
@@ -97,19 +150,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 78px;
-  height: 78px;
+  width: 56px;
+  height: 56px;
   margin-right: 20px;
   border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 50%;
-  font-size: 40px;
+  font-size: 28px;
   color: $color-primary;
+
+  @include mq($from: sm) {
+    width: 78px;
+    height: 78px;
+    font-size: 40px;
+  }
 }
 
 .top-banner__area-text {
   font-weight: 500;
-  font-size: rem(18);
+  font-size: rem(15);
   line-height: 1.44;
+
+  @include mq($from: sm) {
+    font-size: rem(18);
+  }
 }
 
 .top-banner-controls {
@@ -123,10 +186,18 @@
   }
 
   .slider-controls__prev {
-    left: -90px;
+    left: -12px;
+
+    @include mq($from: lg) {
+      left: -90px;
+    }
   }
 
   .slider-controls__next {
-    right: -90px;
+    right: -12px;
+
+    @include mq($from: lg) {
+      right: -90px;
+    }
   }
 }

@@ -5,35 +5,55 @@
 .request {
   @include background();
 
-  padding-top: 84px;
-  padding-bottom: 96px;
+  padding-top: rem(72);
+  padding-bottom: rem(72);
+
+  @include mq($from: md) {
+    padding-top: rem(84);
+    padding-bottom: rem(96);
+  }
 }
 
 .request__heading {
   max-width: 460px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: rem(64);
+  margin-bottom: rem(50);
   color: #fff;
   text-transform: none;
   text-align: center;
+
+  @include mq($from: md) {
+    margin-bottom: rem(64);
+  }
 }
 
 .request-form {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @include mq($from: sm) {
+    flex-direction: row;
+  }
 }
 
 .request-form .inputbox {
   width: 100%;
   max-width: 300px;
-  margin-right: 22px;
   margin-bottom: 12px;
 
+  @include mq($from: sm) {
+    margin-right: 22px;
+  }
+
   &:last-of-type {
-    margin-right: 26px;
+
+    @include mq($from: sm) {
+      margin-right: 26px;
+    }
   }
 }
 

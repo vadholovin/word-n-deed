@@ -15,15 +15,14 @@ body {
   overflow-x: hidden;
 
   &.is-blocked,
-  &.is-modal-open,
-  &.is-gradpanel-open {
+  &.is-modal-open {
     overflow: hidden;
   }
 
   &.is-nav-mobile-open {
     overflow: hidden;
 
-    @include mq($from: lg) {
+    @include mq($from: md) {
       overflow: visible;
     }
   }

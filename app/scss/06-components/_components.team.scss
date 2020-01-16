@@ -9,26 +9,45 @@ $team-item-body-x: 22px;
 }
 
 .team-slider {
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: 40px;
+  margin-right: 40px;
+
+  @include mq($from: xs) {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+
+  @include mq($from: md) {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
 }
 
 .team-item {
   display: flex;
   flex-direction: column;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: 8px;
+  margin-right: 8px;
 
   @include on-event {
     outline: none;
+  }
+
+  @include mq($from: md) {
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 
 .team-item__picture {
   position: relative;
-  height: 350px;
+  height: 280px;
 
   clip-path: $global-clip-path;
+
+  @include mq($from: md) {
+    height: 350px;
+  }
 }
 
 .team-item__picture img {
@@ -54,8 +73,12 @@ $team-item-body-x: 22px;
 .team-item__name {
   margin-bottom: 4px;
   font-weight: normal;
-  font-size: rem(22);
+  font-size: rem(18);
   line-height: 1.15;
+
+  @include mq($from: lg) {
+    font-size: rem(22);
+  }
 }
 
 .team-item__position {

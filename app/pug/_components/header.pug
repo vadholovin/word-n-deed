@@ -23,14 +23,14 @@ header.header
             )
         //- MENU ==============================================================
         ul.header-menu
-          li
-            a.header-menu__link(href="about.html") О нас
-          li
-            a.header-menu__link(href="practices.html") Практики
-          li
-            a.header-menu__link(href="lawyers.html") Адвокаты
-          li
-            a.header-menu__link(href="contacts.html") Контакты
+          li.header-menu__item
+            a(href="about.html") О нас
+          li.header-menu__item
+            a(href="practices.html") Практики
+          li.header-menu__item
+            a(href="lawyers.html") Адвокаты
+          li.header-menu__item
+            a(href="contacts.html") Контакты
 
         //- SEARCH ============================================================
         .header-search__wrapper
@@ -68,3 +68,25 @@ header.header
               +icon('close')
 
       a.header__contact(href="+79224776786") +7 (922) 477-67-86
+
+  .mobile-nav
+    .mobile-nav__inner
+      button.mobile-nav__close.js-mobile-nav-close(
+        type="button",
+        aria-label="Закрыть меню"
+      )
+        +icon('close')
+      .mobile-nav__module
+        ul.mobile-menu
+          li.mobile-menu__item
+            a(href="index.html") Главная
+          li.mobile-menu__item
+            a(href="about.html") О нас
+          li.mobile-menu__item
+            a(href="practices.html") Практики
+          li.mobile-menu__item
+            a(href="lawyers.html") Адвокаты
+          li.mobile-menu__item
+            a(href="contacts.html") Контакты
+      .mobile-nav__module
+        a.mobile__contact(href="+79224776786") +7 (922) 477-67-86

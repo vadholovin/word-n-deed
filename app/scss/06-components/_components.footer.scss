@@ -24,23 +24,30 @@
 .footer-menu {
   margin-bottom: 24px;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   list-style: none;
+
+  @include mq($from: xs) {
+    flex-direction: row;
+  }
 }
 
-
-
 .footer-menu__item:not(:last-child)::after {
-  @include pseudo(inline-block, relative);
+  @include pseudo(block, relative);
 
   vertical-align: middle;
   width: 4px;
   height: 4px;
-  margin-left: 16px;
-  margin-right: 16px;
+  margin: 10px auto;
   border-radius: 50%;
   background-color: #ffffff;
+
+  @include mq($from: xs) {
+    display: inline-block;
+    margin: 0 16px;
+  }
 }
 
 .footer-menu__item a {

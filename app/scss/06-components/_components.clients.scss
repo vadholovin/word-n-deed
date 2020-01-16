@@ -11,8 +11,16 @@
 }
 
 .clients-slider {
-  margin-left: 82px;
-  margin-right: 82px;
+  
+  @include mq($from: sm) {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  @include mq($from: lg) {
+    margin-left: 82px;
+    margin-right: 82px;
+  }
 }
 
 .clients-item {
@@ -21,8 +29,8 @@
   justify-content: center;
   align-items: center;
   height: 80px;
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-left: 6px;
+  margin-right: 6px;
   padding: 1rem;
   border: 1px solid $color-primary;
   overflow: hidden;
@@ -30,9 +38,44 @@
   @include on-event {
     outline: none;
   }
+
+  @include mq($from: sm) {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  @include mq($from: lg) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 .clients-item img {
   max-height: 35px;
-  max-width: 124px;
+}
+
+.clients-controls {
+
+  .slider-controls__prev,
+  .slider-controls__next {
+    background-color: #fff;
+
+    @include on-event {
+      background-color: $color-primary;
+    }
+  }
+
+  .slider-controls__prev {
+
+    @include mq($until: sm) {
+      left: -12px;
+    }
+  }
+
+  .slider-controls__next {
+
+    @include mq($until: sm) {
+      right: -12px;
+    }
+  }
 }

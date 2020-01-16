@@ -7,8 +7,20 @@
   margin-bottom: 2.5rem;
   font-family: $font-secondary;
   font-weight: bold;
-  font-size: rem(36);
+  font-size: rem(24);
   text-transform: uppercase;
+
+  @include mq($from: sm) {
+    font-size: rem(28);
+  }
+
+  @include mq($from: sm) {
+    font-size: rem(32);
+  }
+
+  @include mq($from: md) {
+    font-size: rem(36);
+  }
 }
 
 .heading--bar {

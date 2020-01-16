@@ -1,0 +1,13 @@
+extends _template/main
+
+block variables
+  - var title = 'О нас'
+  - var pageClass = 'about-page'
+
+block content
+  include _components/header
+  .o-wrapper
+    .o-container
+      +breadcrumbs(['Главная', 'О компании'])
+      include _pages/2-about/about-content
+  include _components/footer

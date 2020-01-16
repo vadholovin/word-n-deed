@@ -1,0 +1,162 @@
+/* ==========================================================================
+   #CONTENT-ZONE
+   ========================================================================== */
+
+.content-zone {
+  $b: &;
+  font-weight: 300;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  h1 {
+    font-size: rem(24);
+    line-height: 1.5;
+
+    @include mq($from: xs) {
+      font-size: rem(28);
+    }
+    @include mq($from: sm) {
+      font-size: rem(32);
+    }
+    @include mq($from: md) {
+      font-size: rem(36);
+    }
+  }
+
+  h2, h3, h4, h5, h6 {
+    font-size: rem(20);
+    line-height: 1.5;
+
+    @include mq($from: xs) {
+      font-size: rem(24);
+    }
+
+    @include mq($from: sm) {
+      font-size: rem(28);
+    }
+
+    @include mq($from: md) {
+      font-size: rem(30);
+    }
+  }
+
+  p {
+    font-size: rem(16);
+    line-height: 1.6;
+
+    @include mq($from: md) {
+      font-size: rem(18);
+    }
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+
+    small {
+      display: block;
+      font-size: 12px;
+    }
+  }
+
+  a {
+    color: $color-blue;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  blockquote {
+    padding-left: 40px;
+    border-left: 2px solid black;
+    display: block;
+
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  img {
+    max-width: 100%;
+
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  > ul, > ol {
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  ul, ol {
+    font-size: 14px;
+    line-height: 1.5;
+
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    li {
+      padding-left: 20px;
+      position: relative;
+    }
+  }
+
+  ul {
+
+    li {
+
+      &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: '•';
+      }
+    }
+  }
+
+  ol {
+    counter-reset: list1;
+
+    li {
+
+      &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        counter-increment: list1;
+        content: counter(list1) '.';
+      }
+    }
+  }
+
+  b, strong {
+    font-weight: 500;
+  }
+}

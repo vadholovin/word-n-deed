@@ -26,12 +26,16 @@ $team-item-body-x: 22px;
 .team-item {
   display: flex;
   flex-direction: column;
-  margin-left: 8px;
-  margin-right: 8px;
+  height: 100%;
 
   @include on-event {
     outline: none;
   }
+}
+
+.team-slider .team-item {
+  margin-left: 8px;
+  margin-right: 8px;
 
   @include mq($from: md) {
     margin-left: 15px;
@@ -41,9 +45,20 @@ $team-item-body-x: 22px;
 
 .team-item__picture {
   position: relative;
-  height: 280px;
+  height: 220px;
 
   clip-path: $global-clip-path;
+
+  @include mq($from: sm) {
+    height: 280px;
+  }
+  @include mq($from: md) {
+    height: 350px;
+  }
+}
+
+.team-slider .team-item__picture {
+  height: 280px;
 
   @include mq($from: md) {
     height: 350px;
@@ -55,9 +70,20 @@ $team-item-body-x: 22px;
 }
 
 .team-item__body {
+  flex-grow: 1;
   position: relative;
-  padding: 16px $team-item-body-x;
+  padding: 16px;
   background-color: #fff;
+
+  @include mq($from: sm) {
+    padding-left: $team-item-body-x;
+    padding-right: $team-item-body-x;
+  }
+}
+
+.team-slider .team-item__body {
+  padding-left: $team-item-body-x;
+  padding-right: $team-item-body-x;
 }
 
 .team-item__body::after {
@@ -65,9 +91,17 @@ $team-item-body-x: 22px;
 
   height: 0;
   top: -2px;
-  left: $team-item-body-x;
+  left: 16px;
   width: 60px;
   border-top: 4px solid $color-primary;
+
+  @include mq($from: sm) {
+    left: $team-item-body-x;
+  }
+}
+
+.team-slider .team-item__body::after {
+  left: $team-item-body-x;
 }
 
 .team-item__name {

@@ -1,0 +1,41 @@
+/* ==========================================================================
+   #LAWYERS-CONTENT
+   ========================================================================== */
+
+.lawyers-page .o-wrapper {
+  background-color: $color-blue-100;
+}
+
+.lawyers-content {
+  padding-bottom: 50px;
+
+  @include mq($from: md) {
+    padding-bottom: 70px;
+  }
+}
+
+.team-list {
+  margin-top: -12px;
+
+  @include mq($from: xs) {
+    margin-top: -16px;
+  }
+
+  @include mq($from: sm) {
+    margin-top: -30px;
+  }
+}
+
+.team-list > [class*=__col] {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+
+  @include mq($from: xs) {
+    margin-top: 16px;
+  }
+
+  @include mq($from: sm) {
+    margin-top: 30px;
+  }
+}

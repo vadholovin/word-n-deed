@@ -49,6 +49,7 @@
 // Uncomment and add to this section as necessary.
 @import '05-objects/objects.wrapper';
 @import '05-objects/objects.container';
+// @import '05-objects/objects.main-content';
 @import '05-objects/objects.grid';
 @import '05-objects/objects.page-section';
 @import '05-objects/objects.page-mask';
@@ -58,9 +59,12 @@
 // 06. Components
 @import 'slick-carousel/slick/slick.scss';
 @import '06-components/components.slider';
+@import '06-components/components.breadcrumbs';
 @import '06-components/components.button';
 @import '06-components/components.icons';
 @import '06-components/components.hamburger';
+@import '06-components/components.content-zone';
+@import '06-components/components.content-banner';
 @import '06-components/components.headings';
 @import '06-components/components.header';
 @import '06-components/components.header-menu';
@@ -69,10 +73,13 @@
 @import '06-components/components.inputbox';
 @import '06-components/components.input';
 @import '06-components/components.top-banner';
-@import '06-components/components.areas';
+@import '06-components/components.practices';
 @import '06-components/components.request';
 @import '06-components/components.clients';
 @import '06-components/components.team';
+@import '06-components/components.about-content';
+@import '06-components/components.practice-content';
+@import '06-components/components.lawyers-content';
 @import '06-components/components.footer';
 
 // 07. Utilities

@@ -1,5 +1,5 @@
 -
-  var areas = [
+  var practices = [
     {
       heading: "Сопровождение банкротства. Субсидиарная ответственность контролирующих лиц.",
       img: "img/content/practices/practice-1.jpg"
@@ -30,26 +30,26 @@
     },
   ]
 
-section.page-section.areas
+section.page-section.practices-section
   .o-container
-    h2.areas__heading.heading.heading--bar Практики
-    ul.areas-list.grid
-      each item, index in areas
-        li.grid__col-6.grid__col-xs-6.grid__col-md-4(
+    h2.practices__heading.heading.heading--bar Практики
+    ul.practices-list.grid
+      each item, index in practices
+        li.grid__col-6.grid__col-md-4(
           class=(index > 5 ? "u-hidden" : "")
         )
-          a.areas-item(
+          a.practices-item.practices-item--bordered(
             href="#",
           )
-            span.areas-item__order= ("0" + (index+1))
-            figure.areas-item__picture
+            span.practices-item__order= ("0" + (index+1))
+            figure.practices-item__picture
               img(
                 src= item.img,
                 alt=""
               )
-            h3.areas-item__heading!= item.heading
+            h3.practices-item__heading!= item.heading
 
-    button.areas__more.c-btn.c-btn--block.c-btn--outline.c-btn--icon.js-areas-more(
+    button.practices__more.c-btn.c-btn--block.c-btn--outline.c-btn--icon.js-practices-more(
       type="button"
     )
       | Посмотреть все практики

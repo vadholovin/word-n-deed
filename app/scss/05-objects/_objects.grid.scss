@@ -58,13 +58,6 @@ $grid-col-width: $grid-container-width/$grid-cols;
     flex-grow: 1;
   }
 
-  @for $i from 1 through 15 {
-
-    &-#{$default-breakpoint-name}-#{$i} {
-      width: $i * $grid-col-width;
-    }
-  }
-
   @each $key, $val in $new-breakpoints {
     @for $i from 1 through 15 {
       @include mq($from: $key) {
@@ -73,6 +66,13 @@ $grid-col-width: $grid-container-width/$grid-cols;
           width: $i * $grid-col-width;
         }
       }
+    }
+  }
+
+  @for $i from 1 through 15 {
+
+    &-#{$default-breakpoint-name}-#{$i} {
+      width: $i * $grid-col-width;
     }
   }
 }

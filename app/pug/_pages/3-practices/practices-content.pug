@@ -1,0 +1,63 @@
+-
+  var practices = [
+    {
+      heading: "Сопровождение банкротства. Субсидиарная ответственность контролирующих лиц.",
+      img: "img/content/practices/practice-1.jpg"
+    },
+    {
+      heading: "Корпоративное право.",
+      img: "img/content/practices/practice-2.jpg"
+    },
+    {
+      heading: "Преступления в сфере экономики.",
+      img: "img/content/practices/practice-3.jpg"
+    },
+    {
+      heading: "Семейное право.",
+      img: "img/content/practices/practice-4.jpg"
+    },
+    {
+      heading: "Розыск и защита активов.",
+      img: "img/content/practices/practice-5.jpg"
+    },
+    {
+      heading: "Сопровождение банкротства. Субсидиарная ответственность контролирующих лиц.",
+      img: "img/content/practices/practice-1.jpg"
+    },
+    {
+      heading: "Корпоративное право.",
+      img: "img/content/practices/practice-2.jpg"
+    },
+    {
+      heading: "Преступления в сфере экономики.",
+      img: "img/content/practices/practice-3.jpg"
+    },
+    {
+      heading: "Семейное право.",
+      img: "img/content/practices/practice-4.jpg"
+    },
+    {
+      heading: "Розыск и защита активов.",
+      img: "img/content/practices/practice-5.jpg"
+    },
+    {
+      heading: "Комплаенс.",
+      img: "img/content/practices/practice-6.jpg"
+    },
+    
+  ]
+
+.practices-content
+  h1.practices__heading.heading.heading--bar Практики
+  ul.practices-list.grid
+    each item, index in practices
+      li.grid__col-6.grid__col-md-4
+        a.practices-item(
+          href="#",
+        )
+          figure.practices-item__picture
+            img(
+              src= item.img,
+              alt=""
+            )
+          h3.practices-item__heading!= item.heading

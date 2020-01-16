@@ -49,7 +49,10 @@
 }
 
 .header__logo img {
-  width: 100px;
+
+  @include mq($until: md) {
+    width: 100px;
+  }
 }
 
 .header__contact {

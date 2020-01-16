@@ -11,6 +11,7 @@
 /**
  * #HEADER SCROLL
  */
+/*
 (function ($) {
   $(window).scroll(function(){
     let offsetY = $(window).scrollTop();
@@ -24,7 +25,7 @@
     }
   });
 })(jQuery);
-
+*/
 
 /**
  * #MENU

@@ -1,0 +1,13 @@
+extends _template/main
+
+block variables
+  - var title = 'Практики'
+  - var pageClass = 'practices-page'
+
+block content
+  include _components/header
+  .o-wrapper
+    .o-container
+      +breadcrumbs(['Главная', 'Практики'])
+      include _pages/3-practices/practices-content
+  include _components/footer

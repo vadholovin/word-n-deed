@@ -15,3 +15,15 @@ mixin icon(name, mod, block)
     span(class="icon icon-" + name)
       svg(aria-hidden="true", focusable="false")
         use(xlink:href="img/svg/symbol/sprite.svg#" + name)
+
+
+//- Mixin to add breadcrumbs
+mixin breadcrumbs(arr)
+  ul.breadcrumbs&attributes(attributes)
+    each crumb, index in arr
+      if index < (arr.length - 1)
+        li.breadcrumbs__item
+          a(href='#')!= crumb
+      else
+        li.breadcrumbs__item
+          span(href='#')!= crumb

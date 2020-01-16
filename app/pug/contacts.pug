@@ -1,0 +1,13 @@
+extends _template/main
+
+block variables
+  - var title = 'Контакты'
+  - var pageClass = 'contacts-page'
+
+block content
+  include _components/header
+  .o-wrapper
+    .o-container
+      +breadcrumbs(['Главная', 'Контакты'])
+      include _pages/6-contacts/contacts-content
+  include _components/footer

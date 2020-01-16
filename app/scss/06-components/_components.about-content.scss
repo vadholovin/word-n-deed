@@ -1,0 +1,21 @@
+/* ==========================================================================
+   #ABOUT-CONTENT
+   ========================================================================== */
+
+.about-content {
+  padding-bottom: 50px;
+
+  @include mq($from: sm) {
+    padding-bottom: 70px;
+  }
+}
+
+.about-content .content-banner {
+  margin-bottom: 36px;
+}
+
+.about-content__text {
+  column-width: 24rem;
+  column-count: 2;
+  column-gap: 2rem;
+}

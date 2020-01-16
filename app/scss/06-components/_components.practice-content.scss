@@ -1,0 +1,28 @@
+/* ==========================================================================
+   #PRACTICE-CONTENT
+   ========================================================================== */
+
+.practice-content {
+  padding-bottom: 50px;
+
+  @include mq($from: md) {
+    padding-bottom: 70px;
+  }
+}
+
+.practice-content .content-banner {
+  margin-bottom: 1.5rem;
+}
+
+.practice-content .content-zone {
+  
+  @include mq($from: md) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.practice-content .c-btn {
+  max-width: 270px;
+  margin-top: 32px;
+}

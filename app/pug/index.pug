@@ -5,13 +5,11 @@ block variables
   - var pageClass = 'home-page'
 
 block content
-  .o-wrapper
-    include _components/header
-    main.o-main-content
-      include _pages/1-index/top-banner
-      include _pages/1-index/areas
-      include _pages/1-index/request
-      include _pages/1-index/clients
-      include _pages/1-index/team
-
-    include _components/footer
+  include _components/header
+  main.o-wrapper
+    include _pages/1-index/top-banner
+    include _pages/1-index/practices
+    include _pages/1-index/request
+    include _pages/1-index/clients
+    include _pages/1-index/team
+  include _components/footer

@@ -5,15 +5,15 @@
 $bkp-xl: 1920px;
 $bkp-lg: 1300px;
 $bkp-md: 1024px;
-$bkp-sm: 768px;
 $bkp-xs: 480px;
+$bkp-sm: 768px;
 
 $breakpoints: (
-  xl: $bkp-xl,
-  lg: $bkp-lg,
-  md: $bkp-md,
-  sm: $bkp-sm,
   xs: $bkp-xs,
+  sm: $bkp-sm,
+  md: $bkp-md,
+  lg: $bkp-lg,
+  xl: $bkp-xl,
 );
 
 // /**

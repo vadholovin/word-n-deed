@@ -1,8 +1,16 @@
 /* ==========================================================================
-   #AREAS
+   #PRACTICES
    ========================================================================== */
 
-.areas-list {
+.practices-content {
+  padding-bottom: 50px;
+
+  @include mq($from: md) {
+    padding-bottom: 70px;
+  }
+}
+
+.practices-list {
   margin-top: -12px;
   margin-bottom: 35px;
 
@@ -15,12 +23,12 @@
   }
 }
 
-.areas-list > [class*=__col] {
+.practices-list > [class*=__col] {
   display: flex;
   flex-direction: column;
 }
 
-.areas-item {
+.practices-item {
   @include basic-transition((transform));
 
   position: relative;
@@ -32,6 +40,10 @@
   text-decoration: none;
   overflow: hidden;
   background-color: #fff;
+
+  @include on-event {
+    transform: translateY(-5px);
+  }
 
   @include mq($from: xs) {
     min-height: 200px;
@@ -52,9 +64,10 @@
   }
 }
 
-.areas-item::before,
-.areas-item::after {
+.practices-item::before,
+.practices-item::after {
   @include pseudo();
+
   width: 0;
   height: 0;
   border-top-style: solid;
@@ -64,19 +77,19 @@
   border-left-color: transparent;
 }
 
-.areas-item::before {
+.practices-item--bordered::before {
   top: -1px;
   right: -1px;
   border-top-color: $color-primary;
 }
 
-.areas-item::after {
+.practices-item::after {
   top: -2px;
   right: -2px;
   border-top-color: white;
 }
 
-.areas-item__order {
+.practices-item__order {
   position: absolute;
   left: 50%;
   bottom: -0.3em;
@@ -98,13 +111,13 @@
   }
 }
 
-.areas-item__heading {
+.practices-item__heading {
   @include basic-transition((color));
 
   position: relative;
   font-weight: normal;
   font-size: rem(18);
-  color: $color-body;
+  color: #fff;
   z-index: 1;
 
   @include mq($from: sm) {
@@ -112,53 +125,68 @@
   }
 }
 
-.areas-item__picture {
+.practices-item--bordered .practices-item__heading {
+  color: $color-body;
+}
+
+.practices-item__picture {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  clip-path: $global-clip-path;
+}
+
+.practices-item--bordered .practices-item__picture {
   border: 1px solid $color-primary;
 }
 
-.areas-item__picture::after {
+.practices-item__picture::after {
   @include pseudo();
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: $color-dark;
+  opacity: 0.4;
+}
+
+.practices-item--bordered .practices-item__picture::after {
   opacity: 0;
 }
 
-.areas-item__picture img {
+.practices-item__picture img {
   @include fill-img;
+}
+
+.practices-item--bordered img {
   @include basic-transition((opacity));
 
   opacity: 0;
 }
 
-.areas-item {
+.practices__more {
+  border-color: #dedede;
+  font-size: rem(18);
+  text-transform: uppercase;
+}
+
+.practices-item--bordered {
 
   @include on-event {
-    transform: translateY(-5px);
 
-    .areas-item__picture::after {
+    .practices-item__picture::after {
       opacity: 0.4;
     }
 
-    .areas-item__picture img {
+    .practices-item__picture img {
       opacity: 1;
     }
 
-    .areas-item__heading {
+    .practices-item__heading {
       color: #fff;
     }
   }
 }
 
-.areas__more {
-  border-color: #dedede;
-  font-size: rem(18);
-  text-transform: uppercase;
-}

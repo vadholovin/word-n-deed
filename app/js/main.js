@@ -86,15 +86,25 @@
  * #TOGGLE SEARCH FORM
  */
 (function ($) {
+  function hideSearch() {
+    $('.header-search').removeClass('is-open');
+    $('.js-search-toggler').prop('hidden', false);
+  }
+
   $('.js-search-toggler').click(function (e) { 
     e.preventDefault();
-    $('.header-search__wrapper').addClass('is-open');
-    $('.page-mask').addClass('is-visible');
+    $('.header-search')
+      .addClass('is-open')
+      .find('.header-search__input').focus();
+    $(this).prop('hidden', true);
   });
 
-  $('.js-search-close, .js-page-mask').click(function (e) { 
+  $('.header-search__input').focusout(function (e) {
+    hideSearch();
+  });
+
+  $('.js-search-close').click(function (e) { 
     e.preventDefault();
-    $('.header-search__wrapper').removeClass('is-open');
-    $('.page-mask').removeClass('is-visible');
+    hideSearch();
   });
 })(jQuery);

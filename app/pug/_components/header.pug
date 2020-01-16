@@ -2,6 +2,8 @@ header.header
   .o-container
     .header__inner
       nav.header__nav
+        button.hamburger.js-menu-toggler(aria-label="Открыть меню")
+          span.hamburger__bar
         //- LOGO ==============================================================
         if pageClass == "home-page"
           .header__logo.logo
@@ -37,7 +39,7 @@ header.header
             aria-label="Открыть форму поиска"
           )
             +icon('search')
-          form.header-search.form.js-header-search(
+          form.header-search.form(
             role='search',
             action="/",
             method="get",
@@ -47,21 +49,22 @@ header.header
               label.u-hidden-visually(for="header-search")
                 | Поиск по сайту
               .inputbox__wrapper
-                input.input#header-search(
+                input.input.header-search__input(
                   autocomplete='off',
                   name='s',
                   type='text',
                   placeholder='Поиск...',
+                  aria-label='Поле поиска'
                 )
+            button.header-search__submit(
+              type="submit",
+              aria-label="Найти"
+            )
+              +icon('search')
             button.header-search__close.js-search-close(
               type="button",
               aria-label="Закрыть форму поиска"
             )
               +icon('close')
-            button.header-search__button(
-              type="submit",
-              aria-label="Найти"
-            )
-              +icon('search')
 
       a.header__contact(href="+79224776786") +7 (922) 477-67-86

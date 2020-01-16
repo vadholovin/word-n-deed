@@ -15,7 +15,8 @@
  * Hide visually and from screen readers.
  */
 
-.u-hidden {
+.u-hidden,
+[hidden] {
   display: none !important;
 }
 

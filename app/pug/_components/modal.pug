@@ -1,0 +1,49 @@
+.modal(id="modal-form-consulting", aria-hidden='true')
+  .modal__overlay(tabindex='-1', data-micromodal-close='')
+    .modal__container(role='dialog', aria-modal='true')
+      .modal__content
+        form.modal-form.form#form-consulting
+          p.modal__heading
+            | Оставье заявку и получите
+            br
+            | бесплатную консультацию
+          .inputbox
+            label.u-hidden-visually(for="form-consulting-name") Укажите ваше имя
+            .inputbox__wrapper
+              input.input(
+                type="text",
+                name="form-consulting-name",
+                id="form-consulting-name",
+                placeholder="Ваше имя"
+              )
+          .inputbox
+            label.u-hidden-visually(for="form-consulting-phone") Укажите ваш телефон
+            .inputbox__wrapper
+              input.input(
+                type="tel",
+                data-type="tel",
+                name="form-consulting-phone",
+                id="form-consulting-phone",
+                placeholder="Ваш телефон"
+              )
+          button.c-btn.c-btn--block.c-btn--primary.c-btn--icon(type="submit")
+            | Оставить заявку
+            +icon('chevron-right')
+        button.modal__close(
+          type="button"
+          aria-label='Закрыть попап',
+          data-micromodal-close='')
+          +icon('close')
+
+//- Modal response
+.modal.modal--response#modal-response(aria-hidden='true')
+  .modal__overlay(tabindex='-1', data-micromodal-close='')
+    .modal__container(role='dialog', aria-modal='true')
+      .modal__content
+        p.modal__heading
+        p.modal__text
+        button.modal__close(
+          type="button"
+          aria-label='Закрыть попап',
+          data-micromodal-close='')
+          +icon('close')

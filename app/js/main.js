@@ -15,10 +15,10 @@
 
     if ( offsetY > 150) {
       $('.header').addClass('is-scrolled');
-      $('.o-wrapper').addClass('is-header-scrolled');
+      $('body').addClass('is-header-scrolled');
     } else if ( offsetY < 150) {
       $('.header').removeClass('is-scrolled');
-      $('.o-wrapper').removeClass('is-header-scrolled');
+      $('body').removeClass('is-header-scrolled');
     }
   });
 })(jQuery);
@@ -220,5 +220,19 @@
     e.preventDefault();
     $('.practices-list').find('[class*=grid__col]:hidden').removeClass('u-hidden');
     $(this).hide();
+  });
+})(jQuery);
+
+/**
+ * #MICROMODAL
+ */
+(function ($) {
+  MicroModal.init({
+    onShow: function () {
+      $('body').addClass('is-modal-open');
+    },
+    onClose: function () {
+      $('body').removeClass('is-modal-open');
+    },
   });
 })(jQuery);

@@ -15,7 +15,8 @@ html(class='no-js', lang='ru')
     link(rel="stylesheet" type='text/css' href="css/styles.min.css")
   body(class=pageClass)
     block content
-    .page-mask.js-page-mask
+    include ../_components/modal
+    .page-mask.js-page-mask(data-micromodal-close="")
     script(src="js/libs.min.js")
     script(src="js/main.js")
     block script

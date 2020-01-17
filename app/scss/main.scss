@@ -48,12 +48,9 @@
 // 05. Objects
 @import '05-objects/objects.wrapper';
 @import '05-objects/objects.container';
-// @import '05-objects/objects.main-content';
 @import '05-objects/objects.grid';
 @import '05-objects/objects.page-section';
 @import '05-objects/objects.page-mask';
-// @import '05-objects/objects.modal';
-
 
 // 06. Components
 @import 'slick-carousel/slick/slick.scss';
@@ -83,6 +80,7 @@
 @import '06-components/components.lawyers-content';
 @import '06-components/components.contacts-content';
 @import '06-components/components.footer';
+@import '06-components/components.modal';
 
 // 07. Utilities
 @import '07-utilities/utilities.clearfix';

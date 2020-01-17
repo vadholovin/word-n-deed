@@ -5339,6 +5339,11 @@ micromatch@^4.0.2:
     braces "^3.0.1"
     picomatch "^2.0.5"
 
+micromodal@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/micromodal/-/micromodal-0.4.2.tgz#8ca34f3d5b2f6f43df173bcdc98af20256a4f07a"
+  integrity sha512-tL8Z6Vi72haNUNlkhLjJJv1Q16eqUWMPAGT4RF7mwDM5DNyJXC67Yj8jw/yVgGYdhnCEBBf3X5JM3d/MpXSEKg==
+
 mime-db@1.40.0, mime-db@^1.28.0:
   version "1.40.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.40.0.tgz#a65057e998db090f732a68f6c276d387d4126c32"

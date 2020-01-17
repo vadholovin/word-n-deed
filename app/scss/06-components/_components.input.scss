@@ -5,6 +5,7 @@
 .input,
 .textarea {
   @include placeholder-color($color-secondary);
+  @include basic-transition((border-color, box-shadow));
 
   padding: 0 28px;
   height: 50px;
@@ -19,6 +20,12 @@
   min-height: 0;
   background-color: white;
   box-shadow: inset 1.69px 3.625px 6.93px 0.07px rgba(0, 0, 0, 0.15);
+
+  &:focus {
+    outline: 2px solid $color-primary;
+    border-color: $color-primary;
+    box-shadow: none;
+  }
 
   @include mq($from: md) {
     font-size: rem(20);

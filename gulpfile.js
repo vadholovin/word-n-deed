@@ -21,7 +21,7 @@ $.gulp.task('app', $.gulp.series(
     'styles:app',
     'img:app',
     'libsJS:app',
-    'libs',
+    // 'libs',
     'js:app',
     'svg'
   )
@@ -35,7 +35,7 @@ $.gulp.task('product', $.gulp.series(
     'styles:dist-min',
     'img:dist',
     'libsJS:dist',
-    'libs',
+    // 'libs',
     'js:dist-min',
     'svg'
   )

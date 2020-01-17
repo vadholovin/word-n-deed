@@ -33,7 +33,11 @@
           .top-banner-item
             .top-banner__heading.heading.heading--bar= item.heading
             p.top-banner__subheading.heading!= item.subheading
-            button.top-banner__btn.c-btn.c-btn--outline.c-btn--icon.js-popup-form(type="button") Получить консультацию
+            button.top-banner__btn.c-btn.c-btn--outline.c-btn--icon.js-popup-form(
+              type="button",
+              data-micromodal-trigger="modal-form-consulting"
+            )
+              | Получить консультацию
               +icon('chevron-right')
             h3.top-banner__areas-heading Специализации:
             ul.top-banner__areas

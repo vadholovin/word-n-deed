@@ -1,15 +1,75 @@
-.contacts-content
-  h1.contacts__heading.heading.heading--bar Контакты
+.content-inner.contacts-content
+  .o-container
+    h1.contacts__heading.heading.heading--bar Контакты
 
-  .contacts-block
-    .contacts-info
-      ul.contacts-list
-        li.contacts-item
-          +icon('placeholder')
-          .contacts-item__text
-            p.
-        li.contacts-item
-          +icon('phone')
-        li.contacts-item
-          +icon('email')
-    .map
+    .contacts-details
+      .contacts-box
+        ul.contacts-list
+          li.contacts-item
+            +icon('placeholder')
+            p.contacts-item__heading
+              | Бизнес-Центр АРМА
+            p.contacts-item__desc.
+              105064, Москва,
+              <br>
+              Нижний Сусальный переулок,
+              <br>
+              дом 5, строение 18
+          li.contacts-item
+            +icon('phone')
+            a(href="tel:+74956457875") +7 (495) 645 78 75
+            br
+            a(href="tel:+79167553340") +7 (916) 755 33 40
+          li.contacts-item
+            +icon('email')
+            a(href="mailto:info@sid.msk.ru") info@sid.msk.ru
+      .contacts-map#map
+.contacts-mailing(style="background-image:url(img/backgrounds/bg-form.jpg);")
+  .o-container
+    h2.contacts-mailing__heading.heading.heading--bar Оставить заявку
+    form.contacts-form.form
+      .form__row
+        .inputbox
+          label.inputbox__label.inputbox__label--placeholder(for="contacts-firstname")
+            | Ваше имя <sup>*</sup>
+          .inputbox__wrapper
+            input.input(
+              type="text",
+              name="contacts-firstname",
+              id="contacts-firstname",
+              require
+            )
+        .inputbox
+          label.inputbox__label.inputbox__label--placeholder(for="contacts-lastname")
+            | Ваша фамилия <sup>*</sup>
+          .inputbox__wrapper
+            input.input(
+              type="text",
+              name="contacts-lastname",
+              id="contacts-lastname",
+              require
+            )
+      .inputbox
+        label.inputbox__label.inputbox__label--placeholder(for="contacts-phone")
+          | Ваш номер телефона <sup>*</sup>
+        .inputbox__wrapper
+          input.input(
+            type="tel",
+            data-type="tel",
+            name="contacts-phone",
+            id="contacts-phone",
+            require
+          )
+      .inputbox
+        label.inputbox__label.inputbox__label--placeholder(for="contacts-email")
+          | Ваш e-mail
+        .inputbox__wrapper
+          input.input(
+            type="email",
+            data-type="email",
+            name="contacts-email",
+            id="contacts-email",
+          )
+      button.c-btn.c-btn--block.c-btn--outline.c-btn--icon(type="submit")
+        | Отправить
+        +icon('chevron-right')

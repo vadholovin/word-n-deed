@@ -10,7 +10,9 @@ module.exports = function () {
   $.gulp.task('pug', () => {
     return $.gulp.src(source)
       .pipe(plumber())
-      .pipe(filter(file => /app[\\\/]pug/.test(file.path)))
+      .pipe(filter(function (file) {
+        return !/\/_/.test(file.path) && !/^_/.test(file.relative);
+      }))
       .pipe(pug())
       .pipe(prettify({
         braceStyle: 'expand',

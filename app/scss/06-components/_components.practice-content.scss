@@ -2,13 +2,6 @@
    #PRACTICE-CONTENT
    ========================================================================== */
 
-.practice-content {
-  padding-bottom: 50px;
-
-  @include mq($from: md) {
-    padding-bottom: 70px;
-  }
-}
 
 .practice-content .content-banner {
   margin-bottom: 1.5rem;

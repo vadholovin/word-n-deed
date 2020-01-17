@@ -1,5 +1,4 @@
 /* eslint-disable */
-
 /**
  * #SVG4EVERYBODY
  */
@@ -7,25 +6,22 @@
   svg4everybody({});
 })(jQuery);
 
-
 /**
  * #HEADER SCROLL
  */
-/*
 (function ($) {
   $(window).scroll(function(){
     let offsetY = $(window).scrollTop();
 
-    if ( offsetY > 100) {
+    if ( offsetY > 150) {
       $('.header').addClass('is-scrolled');
-      $('.o-main-content').addClass('is-header-scrolled');
-    } else if ( offsetY < 100) {
+      $('.o-wrapper').addClass('is-header-scrolled');
+    } else if ( offsetY < 150) {
       $('.header').removeClass('is-scrolled');
-      $('.o-main-content').removeClass('is-header-scrolled');
+      $('.o-wrapper').removeClass('is-header-scrolled');
     }
   });
 })(jQuery);
-*/
 
 /**
  * #MENU
@@ -45,7 +41,6 @@
     $('body').removeClass('is-nav-mobile-open');
   });
 })(jQuery);
-
 
 /**
  * #SLIDERS
@@ -139,7 +134,6 @@
 
 })(jQuery);
 
-
 /**
  * #SEARCH FORM
  */
@@ -164,5 +158,67 @@
   $('.js-search-close').click(function (e) { 
     e.preventDefault();
     hideSearch();
+  });
+})(jQuery);
+
+/**
+ * #HIDDING FORM LABELS
+ */
+(function ($) {
+  $('.inputbox').mouseover(function () {
+    let label = $(this).find('.inputbox__label--placeholder');
+    if (!label.is('is-hidden')) {
+      label.addClass('is-hidden');
+    }
+  });
+
+  $('.inputbox').mouseleave(function () { 
+    let label = $(this).find('.inputbox__label--placeholder');
+    let input = $(this).find('.input');
+    if (!input.val() && !input.is(':focus')) {
+      label.removeClass('is-hidden');
+    }
+  });
+
+  $('.input').focus(function (e) { 
+    e.preventDefault();
+    let label = $(this).parents('.inputbox').find('.inputbox__label--placeholder');
+    label.addClass('is-hidden');
+  });
+
+  $('.input').focusout(function (e) { 
+    e.preventDefault();
+    let label = $(this).parents('.inputbox').find('.inputbox__label--placeholder');
+    if (!$(this).val()) {
+      label.removeClass('is-hidden');
+    }
+  });
+})(jQuery);
+
+/**
+ * #INPUTMASK
+ */
+(function () {
+  function inputmask() {
+    Inputmask({
+      mask: '+7 (999) 999 99 99',
+    }).mask('input[data-type="tel"]');
+  
+    Inputmask({
+      alias: 'email',
+    }).mask('input[data-type="email"]');
+  }
+
+  inputmask();
+})();
+
+/**
+ * #SHOW ALL PRACTICES
+ */
+(function ($) {
+  $('.js-practices-more').click(function (e) { 
+    e.preventDefault();
+    $('.practices-list').find('[class*=grid__col]:hidden').removeClass('u-hidden');
+    $(this).hide();
   });
 })(jQuery);

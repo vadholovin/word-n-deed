@@ -44,20 +44,21 @@
       heading: "Комплаенс.",
       img: "img/content/practices/practice-6.jpg"
     },
-    
+
   ]
 
-.practices-content
-  h1.practices__heading.heading.heading--bar Практики
-  ul.practices-list.grid
-    each item, index in practices
-      li.grid__col-6.grid__col-md-4
-        a.practices-item(
-          href="#",
-        )
-          figure.practices-item__picture
-            img(
-              src= item.img,
-              alt=""
-            )
-          h3.practices-item__heading!= item.heading
+.content-inner.practices-content
+  .o-container
+    h1.practices__heading.heading.heading--bar Практики
+    ul.practices-list.grid
+      each item, index in practices
+        li.grid__col-6.grid__col-md-4
+          a.practices-item(
+            href="#",
+          )
+            figure.practices-item__picture
+              img(
+                src= item.img,
+                alt=""
+              )
+            h3.practices-item__heading!= item.heading

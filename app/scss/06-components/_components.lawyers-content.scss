@@ -6,14 +6,6 @@
   background-color: $color-blue-100;
 }
 
-.lawyers-content {
-  padding-bottom: 50px;
-
-  @include mq($from: md) {
-    padding-bottom: 70px;
-  }
-}
-
 .team-list {
   margin-top: -12px;
 

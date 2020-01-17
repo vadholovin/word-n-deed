@@ -1,0 +1,153 @@
+/* ==========================================================================
+   #CONTACTS-CONTENT
+   ========================================================================== */
+
+.contacts-content {
+  
+  @include mq($from: md) {
+    padding-bottom: 60px;
+  }
+}
+
+.contacts-details {
+  position: relative;
+}
+
+.contacts-box {
+  width: 100%;
+  max-width: 385px;
+  margin-bottom: 50px;
+
+  @include mq($from: md) {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    padding: 30px;
+    border: 1px solid $color-primary;
+    background-color: #ffffff;
+    box-shadow: 0 4px 9.8px 0.2px rgba(0, 0, 0, 0.07);
+    z-index: 1;
+  }
+}
+
+.contacts-list {
+  list-style: none;
+}
+
+.contacts-item {
+  position: relative;
+  padding-left: 30px;
+  font-weight: 500;
+  font-size: rem(16);
+}
+
+.contacts-item + .contacts-item {
+  margin-top: 20px;
+}
+
+.contacts-item > a:not(:first-of-type),
+.contacts-item > p:not(:first-of-type) {
+  margin-top: 8px;
+}
+
+.contacts-item .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+  color: $color-primary;
+}
+
+.contacts-item .icon-phone {
+  font-size: 18px;
+}
+
+.contacts-item a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.contacts-item__desc {
+  font-weight: normal;
+}
+
+.contacts-map {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+
+  @include mq($from: md) {
+    height: 490px;
+  }
+}
+
+.contacts-map {
+  @include background;
+  background-image: url(../img/backgrounds/map.jpg);
+}
+
+.contacts-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.contacts-mailing {
+  @include background;
+
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+.contacts-mailing .o-container {
+  
+  @include mq($from: md) {
+    padding-left: 40px;
+  }
+}
+
+.contacts-mailing__heading {
+  color: #fff;
+  border: none;
+  text-transform: none;
+
+  &::after {
+    width: 80px;
+    border-top-width: 3px;
+  }
+}
+
+.contacts-form {
+  width: 100%;
+  max-width: 415px;
+}
+
+.contacts-form .form__row .inputbox {
+  width: 100%;
+
+  @include mq($from: xs) {
+    width: calc(50% - 8px);
+    margin-right: 16px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.contacts-form .inputbox {
+  margin-bottom: 15px;
+}
+
+.contacts-form .inputbox:last-of-type {
+  margin-bottom: 18px;
+}
+
+.contacts-form .input {
+  font-size: rem(15);
+  padding-left: 16px;
+  padding-right: 16px;
+}

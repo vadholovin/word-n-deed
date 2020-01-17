@@ -1,14 +1,12 @@
 /* ==========================================================================
-   #ABOUT-CONTENT
+   #FORM
    ========================================================================== */
 
-
-.about-content .content-banner {
-  margin-bottom: 36px;
+.form__row {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.about-content__text {
-  column-width: 24rem;
-  column-count: 2;
-  column-gap: 2rem;
+.form__row--y-center {
+  align-items: center;
 }

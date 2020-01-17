@@ -11,6 +11,7 @@ module.exports = function () {
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/svg4everybody/dist/svg4everybody.min.js',
         'node_modules/slick-carousel/slick/slick.min.js',
+        'node_modules/inputmask/dist/inputmask.min.js',
     ])
       .pipe(concat('libs.min.js'))
       .pipe($.gulp.dest(scriptsPATH.ouput));
@@ -21,6 +22,7 @@ module.exports = function () {
       'node_modules/jquery/dist/jquery.min.js',
       'node_modules/svg4everybody/dist/svg4everybody.min.js',
       'node_modules/slick-carousel/slick/slick.min.js',
+      'node_modules/inputmask/dist/inputmask.min.js',
     ])
       .pipe(concat('libs.min.js'))
       .pipe(uglify())

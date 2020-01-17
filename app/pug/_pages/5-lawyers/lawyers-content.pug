@@ -32,17 +32,18 @@
     },
   ]
 
-.lawyers-content
-  h1.lawyers__heading.heading.heading--bar Адвокаты
-  ul.team-list.grid
-    each item, index in team
-      li.grid__col-6.grid__col-sm-4.grid__col-md-3
-        .team-item
-          figure.team-item__picture
-            img(
-              src= item.img,
-              alt=""
-            )
-          .team-item__body
-            h3.team-item__name= item.name
-            p.team-item__position= item.position
+.content-inner.lawyers-content
+  .o-container
+    h1.lawyers__heading.heading.heading--bar Адвокаты
+    ul.team-list.grid
+      each item, index in team
+        li.grid__col-6.grid__col-sm-4.grid__col-md-3
+          .team-item
+            figure.team-item__picture
+              img(
+                src= item.img,
+                alt=""
+              )
+            .team-item__body
+              h3.team-item__name= item.name
+              p.team-item__position= item.position

@@ -1,5 +1,5 @@
-module.exports = function () {
-    $.gulp.task('clean', function () {
-        return $.del('./dist')
-    })
+module.exports = () => {
+  $.gulp.task('clean', () => {
+    return $.del('./dist')
+  })
 };

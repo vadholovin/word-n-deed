@@ -16,12 +16,11 @@ $.path.task.forEach(function(taskPath) {
 $.gulp.task('app', $.gulp.series(
   'clean',
   $.gulp.parallel(
-    'pug',
+    'templates',
     'fonts',
     'styles:app',
     'img:app',
     'libsJS:app',
-    // 'libs',
     'js:app',
     'svg'
   )
@@ -30,12 +29,11 @@ $.gulp.task('app', $.gulp.series(
 $.gulp.task('product', $.gulp.series(
   'clean',
   $.gulp.parallel(
-    'pug',
+    'templates',
     'fonts',
     'styles:dist-min',
     'img:dist',
     'libsJS:dist',
-    // 'libs',
     'js:dist-min',
     'svg'
   )

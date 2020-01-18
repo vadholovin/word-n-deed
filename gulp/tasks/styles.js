@@ -1,17 +1,17 @@
 const plumber = require('gulp-plumber'),
-  scss = require('gulp-sass'),
-  sassGlob = require('gulp-sass-glob'),
-  autoprefixer = require('gulp-autoprefixer'),
-  csso = require('gulp-csso'),
-  csscomb = require('gulp-csscomb'),
-  sourcemaps = require('gulp-sourcemaps'),
-  rename = require('gulp-rename'),
-  stylesPATH = {
-    "input": "./app/scss/",
-    "ouput": "./dist/css/"
-  };
+      scss = require('gulp-sass'),
+      sassGlob = require('gulp-sass-glob'),
+      autoprefixer = require('gulp-autoprefixer'),
+      csso = require('gulp-csso'),
+      csscomb = require('gulp-csscomb'),
+      sourcemaps = require('gulp-sourcemaps'),
+      rename = require('gulp-rename'),
+      stylesPATH = {
+        "input": "./app/scss/",
+        "ouput": "./dist/css/"
+      };
 
-module.exports = function () {
+module.exports = () => {
   $.gulp.task('styles:app', () => {
     return $.gulp.src(stylesPATH.input + 'main.scss')
       .pipe(plumber())

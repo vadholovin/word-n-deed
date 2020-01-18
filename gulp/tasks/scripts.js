@@ -1,9 +1,9 @@
-let uglify = require('gulp-uglify'),
-  concat = require('gulp-concat'),
-  scriptsPATH = {
-    "input": "./app/js/",
-    "ouput": "./dist/js/"
-  };
+const terser = require('gulp-terser'),
+      concat = require('gulp-concat'),
+      scriptsPATH = {
+        "input": "./app/js/",
+        "ouput": "./dist/js/"
+      };
 
 module.exports = function () {
   $.gulp.task('libsJS:app', () => {
@@ -31,7 +31,7 @@ module.exports = function () {
       'app/libs/micromodal/micromodal.min.js',
     ])
       .pipe(concat('libs.min.js'))
-      .pipe(uglify())
+      .pipe(terser())
       .pipe($.gulp.dest(scriptsPATH.ouput));
   });
 
@@ -57,7 +57,7 @@ module.exports = function () {
         '!' + scriptsPATH.input + 'libs.min.js'
       ])
       .pipe(concat('main.min.js'))
-      .pipe(uglify())
+      .pipe(terser())
       .pipe($.gulp.dest(scriptsPATH.ouput))
   });
 };

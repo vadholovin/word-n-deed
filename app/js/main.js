@@ -7,7 +7,7 @@
 })(jQuery);
 
 /**
- * #DISABLE VIDEO-BACKGROUND ON MOBILE AND TABLET
+ * #PREVENT VIDEO-BACKGROUND LOADING ON MOBILE AND TABLET
  */
 (function ($) {
   if(!isMobile.any) {
@@ -26,7 +26,7 @@
  * #HEADER SCROLL
  */
 (function ($) {
-  $(window).scroll(function(){
+  $(window).scroll(function() {
     let offsetY = $(window).scrollTop();
 
     if ( offsetY > 150) {

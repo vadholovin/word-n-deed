@@ -1,22 +1,23 @@
 const plumber = require('gulp-plumber'),
-  pug = require('gulp-pug'),
-  filter = require('gulp-filter'),
-  prettify = require('gulp-jsbeautifier');
+      pug = require('gulp-pug'),
+      filter = require('gulp-filter'),
+      prettify = require('gulp-jsbeautifier');
 
-const source = 'app/pug/**/*.pug';
-const dest = 'dist';
+const source = 'app/pug/**/*.pug',
+      dest = 'dist';
 
-module.exports = function () {
-  $.gulp.task('pug', () => {
+module.exports = () => {
+  $.gulp.task('templates', () => {
     return $.gulp.src(source)
       .pipe(plumber())
-      .pipe(filter(function (file) {
+      .pipe(filter(file => {
         return !/\/_/.test(file.path) && !/^_/.test(file.relative);
       }))
       .pipe(pug())
       .pipe(prettify({
         braceStyle: 'expand',
-        indentWithTabs: true,
+        indentSize: 2,
+        indentWithTabs: false,
         indentInnerHtml: true,
         preserveNewlines: true,
         endWithNewline: true,
@@ -24,10 +25,15 @@ module.exports = function () {
         maxPreserveNewlines: 50,
         wrapAttributesIndentSize: 1,
         unformatted: ['use'],
+        "html": {
+          "end_with_newline": true,
+          "indent_size": 2,
+          preserveNewlines: true,
+          "indent-empty-lines": true,
+          wrapAttributesIndentSize: 1,
+          inline: [],
+        }
       }))
-      // .pipe(beautify({
-      //   indent_size: 2
-      // }))
       .pipe(plumber.stop())
       .pipe($.gulp.dest(dest))
       .on('end', $.browserSync.reload);

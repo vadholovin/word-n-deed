@@ -1,6 +1,6 @@
-module.exports = function () {
-  $.gulp.task('watch', function () {
-    $.gulp.watch('./app/pug/**/*.pug', $.gulp.series('pug'));
+module.exports = () => {
+  $.gulp.task('watch', () => {
+    $.gulp.watch('./app/pug/**/*.pug', $.gulp.series('templates'));
     $.gulp.watch('./app/scss/**/*.scss', $.gulp.series('styles:app'));
     $.gulp.watch(['./app/img/**/*.{png,jpg,gif,svg}',
       './app/img/**/*.{png,jpg,gif,svg}'

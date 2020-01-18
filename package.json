@@ -47,6 +47,7 @@
   "dependencies": {
     "flickity": "^2.2.1",
     "inputmask": "^5.0.1",
+    "ismobilejs": "^1.0.3",
     "jquery": "^3.4.1",
     "micromodal": "^0.4.2",
     "normalize.css": "^8.0.1",

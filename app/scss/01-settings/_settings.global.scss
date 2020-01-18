@@ -25,15 +25,15 @@ $global-clip-path: polygon(
 
 
 // Utilities
-$use-aspect-ratio: true !default;
-$use-background-size: true !default;
+$use-aspect-ratio: false !default;
+$use-background-size: false !default;
 $use-clearfix: true !default;
-$use-text-colors: true !default;
-$use-bg-colors: true !default;
-$use-font-family: true !default;
-$use-font-size: true !default;
-$use-font-weight: true !default;
-$use-spacing: true !default;
-$use-spacing-responsive: true !default;
-$use-text-alignment: true !default;
-$use-text-style: true !default;
+$use-text-colors: false !default;
+$use-bg-colors: false !default;
+$use-font-family: false !default;
+$use-font-size: false !default;
+$use-font-weight: false !default;
+$use-spacing: false !default;
+$use-spacing-responsive: false !default;
+$use-text-alignment: false !default;
+$use-text-style: false !default;

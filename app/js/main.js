@@ -7,6 +7,22 @@
 })(jQuery);
 
 /**
+ * #DISABLE VIDEO-BACKGROUND ON MOBILE AND TABLET
+ */
+(function ($) {
+  if(!isMobile.any) {
+    $('.js-video-bg source').each(function () {
+      $(this).attr('src', $(this).data('src'));
+    });
+
+    if (!!document.body.querySelector('.js-video-bg')) {
+      document.querySelector('.js-video-bg').load();
+    }
+  }
+  
+})(jQuery);
+
+/**
  * #HEADER SCROLL
  */
 (function ($) {
@@ -63,6 +79,7 @@
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
+    lazyLoad: 'ondemand',
     speed: 300,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -99,6 +116,7 @@
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    lazyLoad: 'ondemand',
     speed: 300,
     mobileFirst: true,
     prevArrow: $('.js-team-controls [class*=prev]'),
